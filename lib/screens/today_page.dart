@@ -67,38 +67,6 @@ class _TodayPageState extends State<TodayPage> {
               child: AppBar(
                 backgroundColor: Colors.blue[800],
                 title: Text('My Calorie Records'),
-                // actions: <Widget>[
-                //   Row(
-                //     children: <Widget>[
-                //       IconButton(
-                //         icon: Icon(Icons.arrow_back_ios),
-                //         onPressed: () {
-                //           setState(() {
-                //             dateNow = dateNow.subtract(Duration(days: 1));
-                //             dateString =
-                //                 DateFormat('dd-MM-yyyy').format(dateNow);
-                //           });
-                //         },
-                //       ),
-                //       Text(DateFormat('dd MMM').format(dateNow)),
-                //       Opacity(
-                //         opacity: notLastDate ? 1.0 : 0.0,
-                //         child: IconButton(
-                //           icon: Icon(Icons.arrow_forward_ios),
-                //           onPressed: notLastDate
-                //               ? () {
-                //                   setState(() {
-                //                     dateNow = dateNow.add(Duration(days: 1));
-                //                     dateString = DateFormat('dd-MM-yyyy')
-                //                         .format(dateNow);
-                //                   });
-                //                 }
-                //               : null,
-                //         ),
-                //       )
-                //     ],
-                //   )
-                // ],
               ),
             ),
             Container(
@@ -131,14 +99,20 @@ class _TodayPageState extends State<TodayPage> {
                           ? MealsCard(
                               cardColor: colors[index],
                               cardImage: images[index],
-                              cardTitle: mealsList[index].mealType,
-                              cardSubtitle: [
-                                mealsList[index].foodName,
-                                mealsList[index].food2Name,
-                                mealsList[index].food3Name
-                              ],
-                              cardCalorie: mealsList[index].calorie,
-                              id: mealsList[index].id,
+                              cardTitle: mealType[index],
+                              cardSubtitle: index < mealsList.length
+                                  ? [
+                                      mealsList[index].foodName,
+                                      mealsList[index].food2Name,
+                                      mealsList[index].food3Name
+                                    ]
+                                  : [],
+                              cardCalorie: index < mealsList.length
+                                  ? mealsList[index].calorie
+                                  : 0,
+                              id: index < mealsList.length
+                                  ? mealsList[index].id
+                                  : index + 1,
                               recommendedCal: recommendedCal ?? 0,
                               date: dateNow,
                               callbackToUpdateUI: callbackToUpdateUI,
