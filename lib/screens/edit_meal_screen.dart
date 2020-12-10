@@ -1,6 +1,4 @@
 import 'package:calorie_count_app/constants.dart';
-import 'package:calorie_count_app/functional_class/api_caller.dart';
-import 'package:calorie_count_app/model/meal_model.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

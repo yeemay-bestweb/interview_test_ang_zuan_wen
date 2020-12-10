@@ -1,3 +1,3 @@
 # calorie_count_app
 
-Please find TODO tags and finish all tasks 
+Please find 'TODO' tags in lib folder and finish all tasks

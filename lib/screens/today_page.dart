@@ -1,5 +1,4 @@
 import 'package:calorie_count_app/custom_widgets/meals_card.dart';
-import 'package:calorie_count_app/functional_class/api_caller.dart';
 import 'package:calorie_count_app/model/meal_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

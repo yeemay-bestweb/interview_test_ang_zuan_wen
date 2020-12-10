@@ -15,7 +15,6 @@ class Meal {
       this.calorie});
 
   factory Meal.fromJson(Map json) {
-    String type;
     return Meal(
         id: int.parse(json['id']),
         foodName: json['name'],

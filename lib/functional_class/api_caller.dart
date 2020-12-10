@@ -1,7 +1,3 @@
-import 'dart:convert';
-
-import 'package:http/http.dart' as http;
-
 class ApiCaller {
   static const BASEURL = 'https://bestweb.my/interview_test/';
   static const APIKEY = 'interviewtest@8888';
@@ -9,6 +5,7 @@ class ApiCaller {
     "Content-Type": "application/x-www-form-urlencoded",
   };
 
+  ///TODO: Create your api caller functions here
   // Below are sample functions to make GET and POST API calls, you can
   // write your own function too :)
   //
