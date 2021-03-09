@@ -6,6 +6,8 @@ import 'package:intl/intl.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:calorie_count_app/functional_class/api_caller.dart';
+
 class TodayPage extends StatefulWidget {
   @override
   _TodayPageState createState() => _TodayPageState();
@@ -23,6 +25,8 @@ class _TodayPageState extends State<TodayPage> {
 
   loadList() {
     ///TODO: Call Get Meal API here
+    debugPrint("Execute Load List");
+    ApiCaller.getFunction();
   }
 
   @override

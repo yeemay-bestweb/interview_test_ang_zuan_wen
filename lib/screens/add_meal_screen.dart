@@ -1,6 +1,10 @@
 import 'package:calorie_count_app/constants.dart';
+import 'package:calorie_count_app/functional_class/api_caller.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
+import 'package:calorie_count_app/functional_class/api_caller.dart';
+import 'package:calorie_count_app/screens/today_page.dart';
 
 class AddMealScreen extends StatefulWidget {
   final Color themeColor;
@@ -173,6 +177,10 @@ class _AddMealScreenState extends State<AddMealScreen> {
                       ///TODO: Call Add Meal API here and show a success/fail toast
                       ///Hint: Remember to use callback function to update TodayPage UI too,
                       ///Or you can use your preferred State Management method (eg: Provider)
+
+                      debugPrint("Execute postFunction");
+                      ApiCaller.postFunction(type);
+                      TodayPage.callbackToUpdateUI(_addMealKey, _calorieController);
                     }
                   },
                   padding: EdgeInsets.all(15.0),
